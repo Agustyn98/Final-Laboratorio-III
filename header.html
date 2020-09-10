@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="index.php"><img class="mx-2" src="imagenes/foroLogo.JPG"
+                style="max-height: 2rem;" alt=""> FORO</a>
+        <button class="navbar-toggler" type="button button-dark" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-dark"></span>
+        </button>
+        <?php
+            session_start();
+            if(isset($_SESSION["usuario"])){
+        ?>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <h5 class="text-dark font-weight-bold m-2"> Bienvenido <?php echo $_SESSION["usuario"] ?></h5>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light badge badge-secondary m-3" href="login/logout.php"
+                        style="font-size: xx-small;">Cerrar sesion</a>
+                </li>
+            </ul>
+        </div>
+        <?php }else{ ?>
+        <div class="collapse navbar-collapse" style="color: black;" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="login/login.php">Iniciar sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="login/registro.php">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+
+        <?php } ?>
+    </div>
+</nav>

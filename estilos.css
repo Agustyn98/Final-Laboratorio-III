@@ -1,0 +1,30 @@
+body{
+    padding-top: 30px;
+    margin-top: 3rem;
+    background-color: rgb(245,245,245);
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+
+.card{
+    border: 1px solid;
+    border-color: black;
+}
+
+h5{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+.spoiler{ 
+    color: black; 
+    background-color:black;
+  }
+  
+
+.spoiler:hover { 
+    background-color:white; 
+    }
